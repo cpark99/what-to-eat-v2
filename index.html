@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta description="This Web app decides what restaurant to eat at for you, based on an entered location">
+  <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=1, minimum-scale=0.86">
+  <title>What to eat...</title>
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+  <link href="index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div id="container">
+  <nav></nav>
+
+  <div id="content-container">
+    <header role="banner">
+      <h1>What to eat...</h1>
+    </header>
+
+    <section id="description-text" role="textbox">
+      <p>Don't know?</p>
+      <p>Let me decide for you!</p>
+    </section>
+
+    <section id="results" class="hidden">
+      <div id="results-container">
+        <ul id="results-list">
+          
+        </ul>
+        <div id="results-map"></div>
+      </div>
+    </section>
+
+    <section id="food-categories-frame">
+      <form id="food-categories">
+        <select name="food-categories-list">
+          <option value="All">All Categories</option>
+          <option value="Beef">Beef</option>
+          <option value="Chicken">Chicken</option>
+          <option value="Pork">Pork</option>
+          <option value="Lamb">Lamb</option>
+          <option value="Seafood">Seafood</option>
+          <option value="Pasta">Pasta</option>
+          <option value="Vegetarian">Vegetarian</option>
+          <option value="Vegan">Vegan</option>
+          <option value="Starter">Starter</option>
+          <option value="Desert">Dessert</option>
+        </select>
+        <div id="button-box">
+          <button id="submit-button">Find Food!</button>
+        </div>
+      </form>
+    </section>
+    
+  </div>
+
+  <section class="hidden" id="food-details-frame">
+    <div id="food-details-layout">
+      <div id="food-details-media">
+        <img id="food-image" src="" alt="">
+        <h4>How to make:</h4>
+        <iframe width="384" height="250" src="" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <span id="close">&times;</span>
+      <div id="food-details"></div>
+    </div>
+  </section>
+
+  <footer role="contentinfo">
+    <p>This Web app was designed and developed by cpWebDeveloper99@gmail.com</p>
+  </footer>
+  
+  </div>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cuid/1.3.8/browser-cuid.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
