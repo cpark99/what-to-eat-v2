@@ -28,6 +28,8 @@ h1 {
 
 h2 {
   font-size: 28px;
+  color: white;
+  padding-left: 30px;
 }
 
 h3 {
@@ -281,6 +283,7 @@ footer p {
 @media (min-width: 1024px) {
   h2 {
     font-size: 32px;
+    padding-left: 3%;
   }
 
   h4 {
@@ -314,7 +317,7 @@ footer p {
   #food-image {
     width: 200px;
     height: auto;
-    margin-top: 45px;
+    margin-top: 96px;
   }
 
   #food-details {
@@ -331,6 +334,10 @@ footer p {
 }
 
 @media (min-width: 1224px) {
+  h4 {
+    padding-left: 6%;
+  }
+
   h4 {
     padding-left: 13%;
   }

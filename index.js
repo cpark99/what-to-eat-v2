@@ -27,6 +27,10 @@ function handleIngredientsList(responseJson) {
   return handleSplitIngredientsList(measurements, ingredients);
 }
 
+function displayFoodName(responseJson) {
+  $('#food-name-h2').text(responseJson.meals[0].strMeal);
+}
+
 function displayFoodImage(responseJson) {
   $('#food-image-small')[0].src = responseJson.meals[0].strMealThumb;
   $('#food-image-small')[0].alt = 'image of food, ' + responseJson.meals[0].strMeal;
@@ -76,7 +80,6 @@ function showFoodDetails(responseJson) {
   const ingredientsList = handleIngredientsList(responseJson);
   let encodedSearch = encodeURI(responseJson.meals[0].strMeal);
   $('#food-details').append(`
-    <h2>${responseJson.meals[0].strMeal}</h2>
     <img id="food-image-small" src="" alt="">
     <p><span class="bold">Category: </span>${responseJson.meals[0].strCategory}</p>
     <p><span class="bold">Culture: </span>${responseJson.meals[0].strArea}</p>
@@ -95,6 +98,7 @@ function showFoodDetails(responseJson) {
     <p id="instructions">${responseJson.meals[0].strInstructions}</p>
     <p id="api-source">Data is from www.themealdb.com</p>
   `);
+  displayFoodName(responseJson);
   displayFoodImage(responseJson);
   handleIngredientsDisplay(ingredientsList);
   handleFoodMedia(responseJson);
