@@ -12,7 +12,7 @@ This app picks 3 food dishes for the user with a click of a button. Food can be 
 ### Motivation:
 ___
 One of the most frequently asked questions is: "What should we eat?"
-Far too much time is wasted on trying to answer this question, so I decided to make an app to speed up the process.
+Far too much time is wasted on trying to answer this, so I decided to make an app to speed up the process.
 
 ### Technologies Used:
 ___

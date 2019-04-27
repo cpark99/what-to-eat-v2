@@ -6,8 +6,8 @@ function splitIngredientsList(measurements, ingredients) {
   const measurementsList = [];
   const ingredientsList = [];
   for (let i = 1; i < measurements.length; i++) {
-    measurementsList.push(`${measurements[i]}... `);
-    ingredientsList.push(`${ingredients[i]}`);
+    measurementsList.push(`${measurements[i]}...`);
+    ingredientsList.push(' ' + ingredients[i]);
   }
   return [measurementsList, ingredientsList];
 }
@@ -76,7 +76,7 @@ function handleFoodMedia(responseJson) {
 }
 
 function handleClose(targetFrame) {
-  $('.close').click ( event => {
+  $('#close').click ( event => {
     hideTarget(targetFrame);
   });
 }
@@ -87,15 +87,15 @@ function showFoodDetails(responseJson) {
   let encodedSearch = encodeURI(responseJson.meals[0].strMeal);
   $('#food-details').append(`
     <img id="food-image-small" src="" alt="">
-    <p><span class="bold">Category: </span>${responseJson.meals[0].strCategory}</p>
-    <p><span class="bold">Culture: </span>${responseJson.meals[0].strArea}</p>
+    <p><span class="bold big">Category: </span>${responseJson.meals[0].strCategory}</p>
+    <p><span class="bold big">Culture: </span>${responseJson.meals[0].strArea}</p>
     <div id="mobile-video-frame">
-      <p><span class="bold">How to make: </span></p>
-      <iframe src="" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="260" height="180" frameborder="0"></iframe>
+      <p><span class="bold big">How to make: </span></p>
+      <iframe id="small-video" src="" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="260" height="180" frameborder="0"></iframe>
     </div>
-    <p><span class="bold">Search:</span> <a href="https://www.google.com/search?q=${encodedSearch}">Click to Google food item</a></p>
-    <p><span class="bold">Source:</span> <a href="${responseJson.meals[0].strSource}">${responseJson.meals[0].strSource}</a></p>
-    <p><span class="bold">Ingredients:</span></p>
+    <p><span class="bold big">Search:</span> <a href="https://www.google.com/search?q=${encodedSearch}">Click to Google</a></p>
+    <p><span class="bold big">Source:</span> <a href="${responseJson.meals[0].strSource}">${responseJson.meals[0].strSource}</a></p>
+    <p><span class="bold big" id="ingredients-header">Ingredients:</span></p>
     <div id="combined-list">
       <ul id="measurements-list"></ul>
       <ul id="ingredients-list"></ul>

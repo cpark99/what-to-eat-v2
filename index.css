@@ -114,22 +114,8 @@ footer p {
   font-weight: bold;
 }
 
-.close {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-  color: white;
-  -webkit-text-fill-color: white;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
-}
-
-.close:hover {
-  cursor: pointer;
-  -webkit-text-fill-color: lightblue;
+.big {
+  font-size: 18px;
 }
 
 #measurements-list, 
@@ -195,15 +181,37 @@ footer p {
   background-color: rgb(68, 68, 68, 0.99);
 }
 
+#close {
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  color: white;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+#close:hover {
+  cursor: pointer;
+  -webkit-text-fill-color: lightblue;
+}
+
 #food-details {
   color: white;
   padding-left: 30px;
-  padding-right: 5px;
+  padding-right: 10px;
 }
 
 #food-image-small {
   height: 100px;
   margin-left: 10px;
+}
+
+#ingredients-header {
+  margin-bottom: 0;
 }
 
 #combined-list {
@@ -234,7 +242,18 @@ footer p {
   margin-bottom: 12px;
 }
 
+@media (min-width: 350px) {
+  #small-video {
+    margin-left: 10px;
+  }
+}
+
 @media (min-width: 375px) {
+  #close {
+    top: 15px;
+    right: 35px;
+  }
+
   footer {
     height: 55px;
     display: flex;
@@ -267,7 +286,7 @@ footer p {
     left: 2.5%;
   }
 
-  #close-details {
+  #close {
     top: 5%;
     right: 6%;
     font-size: 55px;
