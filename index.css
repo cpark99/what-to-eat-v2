@@ -37,7 +37,7 @@ h3 {
 
 h6 {
   float: right;
-  padding-top: 9px;
+  padding-top: 19px;
   padding-right: 20px;
   margin: auto;
   color: white;
@@ -72,7 +72,7 @@ img:hover {
   
 nav {
   width: 100%;
-  height: 30px;
+  height: 40px;
   background: #B31A00;
 }
 
@@ -277,6 +277,13 @@ footer p {
 @media (min-width: 375px) {
   #contact-info-frame {
     width: 92%;
+  }
+
+  footer {
+    height: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
