@@ -2,7 +2,7 @@
 
 const searchUrl = 'https://www.themealdb.com/api/json/v1/1/';
 
-function handleSplitIngredientsList(measurements, ingredients) {
+function splitIngredientsList(measurements, ingredients) {
   const measurementsList = [];
   const ingredientsList = [];
   for (let i = 1; i < measurements.length; i++) {
@@ -24,7 +24,7 @@ function handleIngredientsList(responseJson) {
       ingredients.push(eval(`responseJson.meals[0].strIngredient${i}`));
     }
   }
-  return handleSplitIngredientsList(measurements, ingredients);
+  return splitIngredientsList(measurements, ingredients);
 }
 
 function displayFoodName(responseJson) {
@@ -73,6 +73,12 @@ function handleFoodMedia(responseJson) {
   $('#food-image')[0].alt = 'image of food, ' + responseJson.meals[0].strMeal;
   $('iframe')[0].src = videoEmbed;
   $('iframe')[1].src = videoEmbed;
+}
+
+function handleClose(targetFrame) {
+  $('.close').click ( event => {
+    hideTarget(targetFrame);
+  });
 }
 
 function showFoodDetails(responseJson) {
@@ -125,7 +131,7 @@ function changeButtonText() {
 }
 
 function handleResultsLayout() {
-  if ($(window).height() < 650) {
+  if ($(window).height() < 650) { // adjustment for iphone 5 and smaller displays
     $('footer').css('bottom', '-100px');
   }
 }
@@ -235,12 +241,6 @@ function handleCategorySelection() {
   } else {
     getFoodCategories(foodCategory);
   }
-}
-
-function handleClose(targetFrame) {
-  $('.close').click ( event => {
-    hideTarget(targetFrame);
-  });
 }
 
 function handleSubmit() {
