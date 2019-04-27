@@ -2,12 +2,14 @@
 
 const searchUrl = 'https://www.themealdb.com/api/json/v1/1/';
 
-function handleFullIngredientsList(measurements, ingredients) {
-  const fullIngredientsList = [];
+function handleSplitIngredientsList(measurements, ingredients) {
+  const measurementsList = [];
+  const ingredientsList = [];
   for (let i = 1; i < measurements.length; i++) {
-    fullIngredientsList.push(`${measurements[i]}........  ${ingredients[i]}`);
+    measurementsList.push(`${measurements[i]}... `);
+    ingredientsList.push(`${ingredients[i]}`);
   }
-  return fullIngredientsList;
+  return [measurementsList, ingredientsList];
 }
 
 function handleIngredientsList(responseJson) {
@@ -22,7 +24,7 @@ function handleIngredientsList(responseJson) {
       ingredients.push(eval(`responseJson.meals[0].strIngredient${i}`));
     }
   }
-  return handleFullIngredientsList(measurements, ingredients);
+  return handleSplitIngredientsList(measurements, ingredients);
 }
 
 function displayFoodImage(responseJson) {
@@ -35,12 +37,15 @@ function showTarget(target) {
 }
 
 function handleIngredientsDisplay(ingredientsArray) {
-  for (let i = 0; i < ingredientsArray.length; i++) {
-    $('#food-details').children('#ingredients-list').append(`
-    <li>${ingredientsArray[i]}</li>
-  `);
+  console.log(ingredientsArray);
+  for (let i = 0; i < ingredientsArray[1].length; i++) {
+    $('#food-details').children('#combined-list').children('#measurements-list').append(`
+    <li>${ingredientsArray[0][i]}</li>
+    `);
+    $('#food-details').children('#combined-list').children('#ingredients-list').append(`
+    <li>${ingredientsArray[1][i]}</li>
+    `);
   }
-  showTarget($('#ingredients-list'));
 }
 
 function hideTarget(target) {
@@ -82,7 +87,10 @@ function showFoodDetails(responseJson) {
     <p><span class="bold">Search:</span> <a href="https://www.google.com/search?q=${encodedSearch}">Click to Google food item</a></p>
     <p><span class="bold">Source:</span> <a href="${responseJson.meals[0].strSource}">${responseJson.meals[0].strSource}</a></p>
     <p><span class="bold">Ingredients:</span></p>
-    <ul id="ingredients-list"></ul>
+    <div id="combined-list">
+      <ul id="measurements-list"></ul>
+      <ul id="ingredients-list"></ul>
+    </div>
     <p><span class="bold">Instructions:</span></p>
     <p id="instructions">${responseJson.meals[0].strInstructions}</p>
     <p id="api-source">Data is from www.themealdb.com</p>
@@ -113,7 +121,9 @@ function changeButtonText() {
 }
 
 function handleResultsLayout() {
-  $('footer').css('bottom', '-100px');
+  if ($(window).height() < 650) {
+    $('footer').css('bottom', '-100px');
+  }
 }
 
 function handleResults(responseJson) {

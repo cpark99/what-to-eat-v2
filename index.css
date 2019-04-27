@@ -160,6 +160,11 @@ footer p {
   -webkit-text-fill-color: lightblue;
 }
 
+#measurements-list, 
+#ingredients-list {
+  padding-left: 0px;
+}
+
 #container {
   min-height: 100vh;
   height: 100%;
@@ -236,9 +241,9 @@ footer p {
   margin-left: 10px;
 }
 
-#ingredients-list {
-  margin-bottom: 30px;
-  padding-left: 20px;
+#combined-list {
+  display: flex;
+  padding-left: 10px;
 }
 
 #instructions {
@@ -247,6 +252,7 @@ footer p {
 }
 
 #api-source {
+  margin-top: 60px;
   font-style: italic;
   font-size: 15px;
 }
@@ -256,6 +262,10 @@ footer p {
   padding-right: 10px;
   margin-bottom: 20px;
   font-size: 16px;
+}
+
+#combined-list li {
+  margin-bottom: 12px;
 }
 
 @media (orientation: landscape) {
@@ -304,7 +314,7 @@ footer p {
     left: 2.5%;
   }
 
-  #close {
+  #close-details {
     top: 5%;
     right: 6%;
     font-size: 55px;
