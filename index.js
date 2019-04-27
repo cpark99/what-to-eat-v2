@@ -239,13 +239,6 @@ function handleClose(targetFrame) {
   });
 }
 
-function handleContactButton() {
-  $('#js-contact-button').click(event => {
-    $('#contact-info-frame').removeClass('hidden');
-    handleClose($('#contact-info-frame'));
-  });
-}
-
 function handleSubmit() {
   $('#submit-button').click(event => {
     event.preventDefault();
@@ -255,7 +248,6 @@ function handleSubmit() {
 }
 
 function handleAppStart() {
-  handleContactButton();
   handleSubmit();
 }
 
