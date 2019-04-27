@@ -10,6 +10,12 @@ This app picks 3 food dishes for the user with a click of a button. Food can be 
 One of the most frequently asked questions is: "What should we eat?"
 Far too much time is wasted on trying to answer this question, so I decided to make an app to speed up the process.
 
+### Technologies Used:
+* JQuery
+* Javascript
+* CSS
+* HTML
+
 ### Screenshots:
 ##### Mobile:
 ![Mobile Screenshot](https://raw.githubusercontent.com/cpark99/what-to-eat-v2/master/img/eat-mobile-home.png)
@@ -25,8 +31,4 @@ Far too much time is wasted on trying to answer this question, so I decided to m
 ![Desktop Screenshot](https://raw.githubusercontent.com/cpark99/what-to-eat-v2/master/img/eat-desktop-results.png)
 ![Desktop Screenshot](https://raw.githubusercontent.com/cpark99/what-to-eat-v2/master/img/eat-desktop-details.png)
 
-#### Technologies Used:
-* JQuery
-* Javascript
-* CSS
-* HTML
+
