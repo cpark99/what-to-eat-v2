@@ -336,7 +336,11 @@ footer p {
   #food-image {
     width: 200px;
     height: auto;
-    margin-top: 96px;
+    margin-top: 23px;
+  }
+
+  #food-image:hover {
+    cursor: default;
   }
 
   #food-details {
