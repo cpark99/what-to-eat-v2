@@ -1,8 +1,7 @@
 # What-to-Eat-v2
 
 #### Live:
-https://cpark99.github.io/what-to-eat-v2/
-
+[Link](https://cpark99.github.io/what-to-eat-v2/)
 #### Summary:
 This app picks 3 food dishes for the user with a click of a button. Food can be specified by a category, and results include a recipe as well as a how-to-make video.
 
@@ -11,13 +10,17 @@ One of the most frequently asked questions is: "What should we eat?" Far too muc
 
 #### Screenshots:
 Mobile:
+![Mobile Screenshot](/cpark99/what-to-eat-v2/blob/master/img/eat-mobile-home.png?raw=true)
+![Mobile Screenshot](/cpark99/what-to-eat-v2/blob/master/img/eat-mobile-results.png?raw=true)
+![Mobile Screenshot](/cpark99/what-to-eat-v2/blob/master/img/eat-mobile-details.png?raw=true)
+![Mobile Screenshot](/cpark99/what-to-eat-v2/blob/master/img/eat-mobile-details-2.png?raw=true)
 
 Tablet:
 
 Desktop:
 
 #### Technologies Used:
-JQuery
-Javascript
-CSS
-HTML
+* JQuery
+* Javascript
+* CSS
+* HTML
