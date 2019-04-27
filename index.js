@@ -66,12 +66,6 @@ function handleFoodMedia(responseJson) {
   $('iframe')[1].src = videoEmbed;
 }
 
-function handleClose() {
-  $('#close').click ( event => {
-    hideTarget($('#food-details-frame'));
-  });
-}
-
 function showFoodDetails(responseJson) {
   $('#food-details').empty();
   const ingredientsList = handleIngredientsList(responseJson);
@@ -91,12 +85,13 @@ function showFoodDetails(responseJson) {
     <ul id="ingredients-list"></ul>
     <p><span class="bold">Instructions:</span></p>
     <p id="instructions">${responseJson.meals[0].strInstructions}</p>
+    <p id="api-source">Data is from www.themealdb.com</p>
   `);
   displayFoodImage(responseJson);
   handleIngredientsDisplay(ingredientsList);
   handleFoodMedia(responseJson);
   showTarget($('#food-details-frame'));
-  handleClose();
+  handleClose($('#food-details-frame'));
 }
 
 function handleTextClick(responseJson) {
@@ -118,9 +113,7 @@ function changeButtonText() {
 }
 
 function handleResultsLayout() {
-  if ($('#container').height() < 640) {
-    $('#container').css('min-height','130vh');
-  }
+  $('footer').css('bottom', '-100px');
 }
 
 function handleResults(responseJson) {
@@ -230,6 +223,19 @@ function handleCategorySelection() {
   }
 }
 
+function handleClose(targetFrame) {
+  $('.close').click ( event => {
+    hideTarget(targetFrame);
+  });
+}
+
+function handleContactButton() {
+  $('#js-contact-button').click(event => {
+    $('#contact-info-frame').removeClass('hidden');
+    handleClose($('#contact-info-frame'));
+  });
+}
+
 function handleSubmit() {
   $('#submit-button').click(event => {
     event.preventDefault();
@@ -239,6 +245,7 @@ function handleSubmit() {
 }
 
 function handleAppStart() {
+  handleContactButton();
   handleSubmit();
 }
 
