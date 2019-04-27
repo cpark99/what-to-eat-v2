@@ -12,13 +12,20 @@ Far too much time is wasted on trying to answer this question, so I decided to m
 #### Screenshots:
 Mobile:
 ![Mobile Screenshot](https://raw.githubusercontent.com/cpark99/what-to-eat-v2/master/img/eat-mobile-home.png)
-![Mobile Screenshot](/cpark99/what-to-eat-v2/blob/master/img/eat-mobile-results.png?raw=true)
-![Mobile Screenshot](/cpark99/what-to-eat-v2/blob/master/img/eat-mobile-details.png?raw=true)
-![Mobile Screenshot](/cpark99/what-to-eat-v2/blob/master/img/eat-mobile-details-2.png?raw=true)
+![Mobile Screenshot](https://raw.githubusercontent.com/cpark99/what-to-eat-v2/master/img/eat-mobile-results.png)
+![Mobile Screenshot](https://raw.githubusercontent.com/cpark99/what-to-eat-v2/master/img/eat-mobile-details.png)
+![Mobile Screenshot](https://raw.githubusercontent.com/cpark99/what-to-eat-v2/master/img/eat-mobile-details-2.png)
 
 Tablet:
+![Tablet Screenshot](https://raw.githubusercontent.com/cpark99/what-to-eat-v2/master/img/eat-tablet-home.png)
+![Tablet Screenshot](https://raw.githubusercontent.com/cpark99/what-to-eat-v2/master/img/eat-tablet-results.png)
+![Tablet Screenshot](https://raw.githubusercontent.com/cpark99/what-to-eat-v2/master/img/eat-tablet-details.png)
+![Tablet Screenshot](https://raw.githubusercontent.com/cpark99/what-to-eat-v2/master/img/eat-tablet-details-2.png)
 
 Desktop:
+![Desktop Screenshot](https://raw.githubusercontent.com/cpark99/what-to-eat-v2/master/img/eat-desktop-home.png)
+![Desktop Screenshot](https://raw.githubusercontent.com/cpark99/what-to-eat-v2/master/img/eat-desktop-results.png)
+![Desktop Screenshot](https://raw.githubusercontent.com/cpark99/what-to-eat-v2/master/img/eat-desktop-details.png)
 
 #### Technologies Used:
 * JQuery
