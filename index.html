@@ -17,60 +17,61 @@
   <div id="container">
     <div id="heading">
     </div>
+    <div id="background-image">
+      <div id="content-container">
+        <header role="banner">
+          <h1>It's Cook-able</h1>
+        </header>
 
-    <div id="content-container">
-      <header role="banner">
-        <h1>It's Cook-able</h1>
-      </header>
+        <section id="description-text" role="textbox">
+          <p>Find delicious recipes...</p>
+          <p>Be your own chef!</p>
+        </section>
 
-      <section id="description-text" role="textbox">
-        <p>Find delicious recipes...</p>
-        <p>Be your own chef!</p>
-      </section>
-
-      <section id="results" class="hidden">
-        <div id="results-container">
-          <ul id="results-list">
-            
-          </ul>
-          <div id="results-map"></div>
-        </div>
-      </section>
-
-      <section id="food-categories-frame">
-        <form id="food-categories">
-          <select name="food-categories-list">
-            <option value="All">All Categories</option>
-            <option value="Beef">Beef</option>
-            <option value="Chicken">Chicken</option>
-            <option value="Pork">Pork</option>
-            <option value="Lamb">Lamb</option>
-            <option value="Seafood">Seafood</option>
-            <option value="Pasta">Pasta</option>
-            <option value="Vegetarian">Vegetarian</option>
-            <option value="Vegan">Vegan</option>
-            <option value="Starter">Starter</option>
-            <option value="Desert">Dessert</option>
-          </select>
-          <div id="button-box">
-            <button id="submit-button"><span class="bold">Find Food!</span></button>
+        <section id="results" class="hidden">
+          <div id="results-container">
+            <ul id="results-list">
+              
+            </ul>
+            <div id="results-map"></div>
           </div>
-        </form>
+        </section>
+
+        <section id="food-categories-frame">
+          <form id="food-categories">
+            <select name="food-categories-list">
+              <option value="All">All Categories</option>
+              <option value="Beef">Beef</option>
+              <option value="Chicken">Chicken</option>
+              <option value="Pork">Pork</option>
+              <option value="Lamb">Lamb</option>
+              <option value="Seafood">Seafood</option>
+              <option value="Pasta">Pasta</option>
+              <option value="Vegetarian">Vegetarian</option>
+              <option value="Vegan">Vegan</option>
+              <option value="Starter">Starter</option>
+              <option value="Desert">Dessert</option>
+            </select>
+            <div id="button-box">
+              <button id="submit-button"><span class="bold">Find Food!</span></button>
+            </div>
+          </form>
+        </section>
+      </div>
+
+      <section class="hidden" id="food-details-frame">
+        <h2 id="food-name-h2"></h2>
+        <div id="food-details-layout">
+          <div id="food-details-media">
+            <img id="food-image" src="" alt="">
+            <h4>How to make:</h4>
+            <iframe width="384" height="250" src="" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <span id="close">&times;</span>
+          <div id="food-details"></div>
+        </div>
       </section>
     </div>
-
-    <section class="hidden" id="food-details-frame">
-      <h2 id="food-name-h2"></h2>
-      <div id="food-details-layout">
-        <div id="food-details-media">
-          <img id="food-image" src="" alt="">
-          <h4>How to make:</h4>
-          <iframe width="384" height="250" src="" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <span id="close">&times;</span>
-        <div id="food-details"></div>
-      </div>
-    </section>
 
     <footer role="contentinfo">
       <p>This Web app was designed and developed by cpWebDeveloper99@gmail.com</p>

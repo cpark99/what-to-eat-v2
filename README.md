@@ -6,13 +6,12 @@ ___
 
 
 ### Summary:
-This app picks 3 food dishes for the user with a click of a button. Food can be specified by a category, and results include a recipe as well as a how-to-make video.
+"It's Cook-able" is a quick solution to finding meal recipes with a click of a button. Food can be specified by a category, and results include instructions as well as a how-to-make video.
 
 
 ### Motivation:
 ___
-One of the most frequently asked questions is: "What should we eat?"
-Far too much time is wasted on trying to answer this, so I decided to make an app to speed up the process.
+Saving money and eating healthy are struggles for most people nowadays, while eating out and neglecting healthy food alternatives increase in convenience. "It's Cook-able" aims to address both issues, by providing recipes users can make themselves, saving money with non-fast-food alternatives.
 
 ### Technologies Used:
 ___
