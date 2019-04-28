@@ -60,12 +60,12 @@ img:hover {
 }
 
 select {
-  width: 197px;
+  width: 221px;
 }
 
 button {
   height: 56px;
-  width: 200px;
+  width: 226px;
   margin-top: 30px;
   background: #FF2500;
   border: 4px solid #B31A00;
@@ -148,8 +148,7 @@ footer p {
 
 #description-text {
   margin-bottom: 25px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 20px;
 }
 
 #food-categories {
@@ -278,6 +277,11 @@ footer p {
 @media (min-width: 768px) {
   #content-container {
     margin-top: 10vh;
+    width: 400px;
+  }
+
+  #description-text {
+    margin-left: 68px;
   }
 
   #food-details-frame {
@@ -301,9 +305,14 @@ footer p {
 }
 
 @media (min-width: 1024px) {
+  h1 {
+    font-size: 37px;
+    margin-bottom: 22px;
+  }
+
   h2 {
     font-size: 32px;
-    padding-left: 3%;
+    padding-left: 4%;
   }
 
   h4 {
@@ -315,8 +324,31 @@ footer p {
     padding-left: 9%;
   }
 
+  select {
+    width: 230px;
+  }
+
+  button {
+    width: 240px;
+  }
+
   iframe {
     margin-top: 30px;
+  }
+
+  #description-text {
+    margin-left: 62px;
+  }
+
+  #results-container {
+    margin-top: -15px;
+  }
+
+  #results-list {
+    width: 230px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
   }
 
   #food-details-layout {
@@ -364,5 +396,9 @@ footer p {
 
   h4 {
     padding-left: 13%;
+  }
+
+  #content-container {
+    margin-top: 9vh;
   }
 }
