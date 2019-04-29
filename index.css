@@ -319,6 +319,12 @@ and (orientation: portrait) {
   }
 }
 
+@media (min-width: 834px) {
+  #background-image {
+    padding-bottom: 64%;
+  }
+}
+
 @media (max-width: 1023px) {
   #food-details-media {
     display: none;
@@ -329,6 +335,9 @@ and (orientation: portrait) {
 and (orientation: landscape) {
   #background-image {
     padding-bottom: 20%;
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -417,10 +426,20 @@ and (orientation: landscape) {
   }
 }
 
+@media (min-width: 1112px) 
+and (orientation: landscape) {
+  #background-image {
+    padding-bottom: 24%;
+    width: 61%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 @media (min-width: 1224px) 
 and (orientation: landscape) {
   #background-image {
-    padding-bottom: 18%;
+    padding-bottom: 27%;
   }
 }
 
@@ -435,5 +454,12 @@ and (orientation: landscape) {
 
   #content-container {
     margin-top: 9vh;
+  }
+}
+
+@media (min-width: 1768px) 
+and (orientation: landscape) {
+  #background-image {
+    padding-bottom: 22%;
   }
 }
