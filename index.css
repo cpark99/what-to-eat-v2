@@ -297,7 +297,7 @@ and (orientation: portrait) {
 and (min-height: 775px) 
 and (orientation: portrait) {
   #background-image {
-    padding-bottom: 66%;
+    padding-bottom: 65%;
   }
 }
 
@@ -314,6 +314,15 @@ and (min-height: 855px)
 and (orientation: portrait) {
   #background-image {
     padding-bottom: 76%;
+  }
+}
+
+@media (min-width: 480px) 
+and (max-width: 490px) 
+and (min-height: 856px) 
+and (orientation: portrait) {
+  #background-image {
+    padding-bottom: 77%;
   }
 }
 
