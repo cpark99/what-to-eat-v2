@@ -2,7 +2,7 @@
 
 const searchUrl = 'https://www.themealdb.com/api/json/v1/1/';
 
-function handleFullIngredientsList(measurements, ingredients) {
+function combineIngredientsList(measurements, ingredients) {
   const fullIngredientsList = [];
   for (let i = 1; i < measurements.length; i++) {
     fullIngredientsList.push(`${measurements[i]} ${ingredients[i]}`);
@@ -10,7 +10,7 @@ function handleFullIngredientsList(measurements, ingredients) {
   return fullIngredientsList;
 }
 
-function handleIngredientsList(responseJson) {
+function getIngredientsList(responseJson) {
   let listItems = 20;
   const measurements = [];
   const ingredients = [];
@@ -22,7 +22,7 @@ function handleIngredientsList(responseJson) {
       ingredients.push(eval(`responseJson.meals[0].strIngredient${i}`));
     }
   }
-  return handleFullIngredientsList(measurements, ingredients);
+  return combineIngredientsList(measurements, ingredients);
 }
 
 function displayFoodName(responseJson) {
@@ -32,6 +32,15 @@ function displayFoodName(responseJson) {
 function displayFoodImage(responseJson) {
   $('#food-image-small')[0].src = responseJson.meals[0].strMealThumb;
   $('#food-image-small')[0].alt = 'image of food, ' + responseJson.meals[0].strMeal;
+}
+
+function removeDuplicateResults(responseJson) {
+  if (responseJson[1].meals === responseJson[0].meals || responseJson[1].meals === responseJson[2].meals) {
+    responseJson.splice(1,1);
+  } else if (responseJson[0].meals === responseJson[2].meals) {
+    responseJson.pop();
+  }
+  handleResults(responseJson);
 }
 
 function showTarget(target) {
@@ -78,7 +87,7 @@ function handleClose(targetFrame) {
 
 function showFoodDetails(responseJson) {
   $('#food-details').empty();
-  const ingredientsList = handleIngredientsList(responseJson);
+  const ingredientsList = getIngredientsList(responseJson);
   let encodedSearch = encodeURI(responseJson.meals[0].strMeal);
   $('#food-details').append(`
     <img id="food-image-small" src="" alt="">
@@ -129,7 +138,6 @@ function changeButtonText() {
 } */
 
 function handleResults(responseJson) {
-  console.log(responseJson);
   for (let i = 0; i < responseJson.length; i++) {
     $('#results-list').append(`
     <li>
@@ -146,7 +154,7 @@ function handleResults(responseJson) {
   changeButtonText();
 }
 
-function getRandomFoodItems() {
+function getRandomFoodResults() {
   const url = searchUrl + 'random.php';
   Promise.all([
     fetch(url),
@@ -162,7 +170,7 @@ function getRandomFoodItems() {
       }
       throw new Error(response.statusText);
     }).then(responseJson => {
-        handleResults(responseJson);
+        removeDuplicateResults(responseJson);
     }).catch(err => {
         $('#js-error-message').text(`Something went wrong: ${err.message}`);
       });   
@@ -199,7 +207,7 @@ function getFoodDetails(idNumbers) {
       });  
 }
 
-function getRandomNumbers(number) {
+function getRandomUniqueNumbers(number) {
   const idNumbers = [];
   let randomNumber = Math.floor(Math.random() * number);
   idNumbers.push(randomNumber);
@@ -216,9 +224,9 @@ function getRandomNumbers(number) {
   return idNumbers;
 }
 
-function randomizeFood(responseJson) {
+function randomizeFoodResults(responseJson) {
   let idNumbers = [];
-  const randomNumbers = getRandomNumbers(responseJson.meals.length);
+  const randomNumbers = getRandomUniqueNumbers(responseJson.meals.length);
   for (let i=0; i<randomNumbers.length; i++) {
     idNumbers.push(responseJson.meals[randomNumbers[i]].idMeal);
   }
@@ -238,7 +246,7 @@ function getFoodCategories(category) {
       }
       throw new Error(response.statusText);
     })
-    .then(responseJson => randomizeFood(responseJson))
+    .then(responseJson => randomizeFoodResults(responseJson))
     .catch(err => {
       $('#js-error-message').text(`Something went wrong: ${err.message}`);
     });
@@ -247,7 +255,7 @@ function getFoodCategories(category) {
 function handleCategorySelection() {
   let foodCategory = $('select').val();
   if (foodCategory === "All") {
-    getRandomFoodItems();
+    getRandomFoodResults();
   } else {
     getFoodCategories(foodCategory);
   }
