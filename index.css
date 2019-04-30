@@ -313,7 +313,7 @@ and (orientation: portrait) {
 and (min-height: 855px) 
 and (orientation: portrait) {
   #background-image {
-    padding-bottom: 76%;
+    padding-bottom: 77%;
   }
 }
 
