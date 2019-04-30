@@ -90,14 +90,14 @@ function showFoodDetails(responseJson) {
   const ingredientsList = getIngredientsList(responseJson);
   let encodedSearch = encodeURI(responseJson.meals[0].strMeal);
   $('#food-details').append(`
-    <img id="food-image-small" src="" alt="">
+    <img id="food-image-small" src="" alt="" tabindex="1">
     <p><span class="bold big">Category: </span>${responseJson.meals[0].strCategory}</p>
     <p><span class="bold big">Culture: </span>${responseJson.meals[0].strArea}</p>
     <div id="mobile-video-frame">
       <p><span class="bold big">How to make: </span></p>
-      <iframe id="small-video" src="" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="260" height="180" frameborder="0"></iframe>
+      <iframe id="small-video" src="" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="260" height="180" frameborder="0" tabindex="2"></iframe>
     </div>
-    <p><span class="bold big">Source:</span> <a href="${responseJson.meals[0].strSource}">${responseJson.meals[0].strSource}</a></p>
+    <p><span class="bold big">Source:</span> <a href="${responseJson.meals[0].strSource}" tabindex="3">${responseJson.meals[0].strSource}</a></p>
     <p><span class="bold big" id="ingredients-header">Ingredients:</span></p>
     <ul id="ingredients-list"></ul>
     <p><span class="bold">Instructions:</span></p>
@@ -119,6 +119,21 @@ function handleTextClick(responseJson) {
   });
 }
 
+function handleEnterButtonPress(responseJson) {
+  $('.js-food-name').on('keypress', event => {
+    if (event.which == 13) {
+      let thumbnailNumber = $(event.currentTarget).siblings('img')[0].attributes.id.nodeValue.slice(-1);
+      showFoodDetails(responseJson[thumbnailNumber]);
+    }
+  });
+  $('.thumbnail-image').on('keypress', event => {
+    if (event.which == 13) {
+      let thumbnailNumber = $(event.currentTarget)[0].attributes.id.nodeValue.slice(-1);
+      showFoodDetails(responseJson[thumbnailNumber]);
+    }
+  });
+}
+
 function handleImageClick(responseJson) {
   $('.thumbnail-image').click( event => {
     let thumbnailNumber = $(event.currentTarget)[0].attributes.id.nodeValue.slice(-1);
@@ -134,8 +149,8 @@ function handleResults(responseJson) {
   for (let i = 0; i < responseJson.length; i++) {
     $('#results-list').append(`
     <li>
-      <img class="thumbnail-image" id="thumbnail-${i}" src="${responseJson[i].meals[0].strMealThumb}" alt="thumbnail image of food, ${responseJson[i].meals[0].strMeal}">
-      <h3 class="js-food-name" tabindex="${i}+1">${responseJson[i].meals[0].strMeal}</h3>
+      <img class="thumbnail-image" id="thumbnail-${i}" src="${responseJson[i].meals[0].strMealThumb}" alt="thumbnail image of food, ${responseJson[i].meals[0].strMeal}" tabindex="1">
+      <h3 class="js-food-name" tabindex="2">${responseJson[i].meals[0].strMeal}</h3>
     </li>
   `);
   }
@@ -143,6 +158,7 @@ function handleResults(responseJson) {
   showTarget($('#results'));
   handleImageClick(responseJson);
   handleTextClick(responseJson);
+  handleEnterButtonPress(responseJson);
   changeButtonText();
 }
 

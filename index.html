@@ -39,7 +39,7 @@
 
         <section id="food-categories-frame">
           <form id="food-categories">
-            <select name="food-categories-list" aria-controls="results-list">
+            <select name="food-categories-list" tabindex="4" aria-controls="results-list">
               <option value="All">All Categories</option>
               <option value="Beef">Beef</option>
               <option value="Chicken">Chicken</option>
@@ -50,7 +50,7 @@
               <option value="Desert">Dessert</option>
             </select>
             <div id="button-box">
-              <button id="submit-button"><span class="bold">Find Food!</span></button>
+              <button id="submit-button" tabindex="5"><span class="bold">Find Food!</span></button>
             </div>
           </form>
         </section>
@@ -64,7 +64,7 @@
             <h4>How to make:</h4>
             <iframe width="384" height="250" src="" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-          <span id="close">&times;</span>
+          <span id="close" tabindex="6">&times;</span>
           <div id="food-details"></div>
         </div>
       </section>
