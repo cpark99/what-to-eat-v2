@@ -129,6 +129,7 @@ function changeButtonText() {
 } */
 
 function handleResults(responseJson) {
+  console.log(responseJson);
   for (let i = 0; i < responseJson.length; i++) {
     $('#results-list').append(`
     <li>
@@ -198,11 +199,28 @@ function getFoodDetails(idNumbers) {
       });  
 }
 
-function randomizeFood(responseJson) {
+function getRandomNumbers(number) {
   const idNumbers = [];
-  for (let i = 0; i < 3; i++) {
-    let randomNumber = Math.floor(Math.random() * responseJson.meals.length);
-    idNumbers.push(responseJson.meals[randomNumber].idMeal);
+  let randomNumber = Math.floor(Math.random() * number);
+  idNumbers.push(randomNumber);
+  while (idNumbers.length < 3) {
+    randomNumber = Math.floor(Math.random() * number);
+    for (let i=0; i<idNumbers.length; i++) {
+      if (idNumbers.find(num => num === randomNumber)) {
+        continue;
+      } else {
+        idNumbers.push(randomNumber);
+      }
+    }
+  }
+  return idNumbers;
+}
+
+function randomizeFood(responseJson) {
+  let idNumbers = [];
+  const randomNumbers = getRandomNumbers(responseJson.meals.length);
+  for (let i=0; i<randomNumbers.length; i++) {
+    idNumbers.push(responseJson.meals[randomNumbers[i]].idMeal);
   }
   getFoodDetails(idNumbers);
 }
