@@ -245,6 +245,14 @@ footer p {
   }
 }
 
+@media (min-width: 362px) /* iphone5 */
+and (min-height: 660px) 
+and (orientation: portrait) {
+  #background-image {
+    padding-bottom: 46%;
+  }
+}
+
 @media (min-width: 375px) {
   #background-image {
     padding-bottom: 48%;
@@ -285,6 +293,30 @@ and (orientation: portrait) {
   }
 }
 
+@media (min-width: 436px) /* iphone6 */
+and (min-height: 775px) 
+and (orientation: portrait) {
+  #background-image {
+    padding-bottom: 65%;
+  }
+}
+
+@media (min-width: 436px) /* iphoneX */
+and (min-height: 944px) 
+and (orientation: portrait) {
+  #background-image {
+    padding-bottom: 103%;
+  }
+}
+
+@media (min-width: 481px) /* iphone6+ */
+and (min-height: 855px) 
+and (orientation: portrait) {
+  #background-image {
+    padding-bottom: 76%;
+  }
+}
+
 @media (min-width: 568px) {
   #mobile-video-frame iframe {
     margin-left: 10px;
@@ -322,6 +354,14 @@ and (orientation: portrait) {
 @media (min-width: 834px) {
   #background-image {
     padding-bottom: 64%;
+  }
+}
+
+@media (min-width: 893px) /* ipad */
+and (min-height: 1190px) 
+and (orientation: portrait) {
+  #background-image {
+    padding-bottom: 68%;
   }
 }
 
@@ -436,6 +476,30 @@ and (orientation: landscape) {
   }
 }
 
+@media (min-width: 1190px) /* ipad */
+and (min-height: 893px) 
+and (orientation: landscape) {
+  #background-image {
+    padding-bottom: 28%;
+  }
+}
+
+@media (min-width: 1190px) 
+and (min-height: 895px) 
+and (orientation: landscape) {
+  #background-image {
+    padding-bottom: 40%;
+  }
+}
+
+@media (min-width: 1190px) /* ipad pro*/
+and (min-height: 1588px) 
+and (orientation: portrait) {
+  #background-image {
+    padding-bottom: 81%;
+  }
+}
+
 @media (min-width: 1224px) 
 and (orientation: landscape) {
   #background-image {
@@ -454,6 +518,21 @@ and (orientation: landscape) {
 
   #content-container {
     margin-top: 9vh;
+  }
+}
+
+@media (min-width: 1588px) /* ipad pro*/
+and (min-height: 1190px) 
+and (orientation: landscape) {
+  #background-image {
+    padding-bottom: 39%;
+  }
+}
+
+@media (min-width: 1674px) 
+and (orientation: landscape) {
+  #background-image {
+    padding-bottom: 35%;
   }
 }
 

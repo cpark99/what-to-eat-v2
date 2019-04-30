@@ -1,4 +1,4 @@
-# What-to-Eat-v2
+# It's Cook-able
 
 ### Live:
 [Link](https://cpark99.github.io/what-to-eat-v2/)
