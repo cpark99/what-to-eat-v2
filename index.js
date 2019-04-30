@@ -219,11 +219,11 @@ function getRandomUniqueNumbers(number) {
 
 function randomizeFoodResults(responseJson) {
   let idNumbers = [];
-  const randomNumbers = getRandomUniqueNumbers(responseJson.meals.length);
+  const randomNumbers = getRandomUniqueNumbers(responseJson.meals.length-1);
   for (let i=0; i<randomNumbers.length; i++) {
     idNumbers.push(responseJson.meals[randomNumbers[i]].idMeal);
-  }
   getFoodDetails(idNumbers);
+  }
 }
 
 function getFoodCategories(category) {
