@@ -282,7 +282,7 @@ and (orientation: portrait) {
 
 @media (min-width: 414px) {
   #background-image {
-    padding-bottom: 60%;
+    padding-bottom: 61%;
     background-size: 128%;
   }
 }

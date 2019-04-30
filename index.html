@@ -30,7 +30,7 @@
 
         <section id="results" class="hidden">
           <div id="results-container">
-            <ul id="results-list">
+            <ul id="results-list" aria-live="polite">
               
             </ul>
             <div id="results-map"></div>
@@ -39,7 +39,7 @@
 
         <section id="food-categories-frame">
           <form id="food-categories">
-            <select name="food-categories-list">
+            <select name="food-categories-list" aria-controls="results-list">
               <option value="All">All Categories</option>
               <option value="Beef">Beef</option>
               <option value="Chicken">Chicken</option>
@@ -56,7 +56,7 @@
         </section>
       </div>
 
-      <section class="hidden" id="food-details-frame">
+      <section class="hidden" id="food-details-frame" aria-live="polite">
         <h2 id="food-name-h2"></h2>
         <div id="food-details-layout">
           <div id="food-details-media">
