@@ -131,12 +131,6 @@ function changeButtonText() {
   $('#submit-button').text('Find more!')
 }
 
-/* function handleResultsLayout() {
-  if ($(window).height() < 650) { // adjustment for iphone 5 and smaller displays
-    $('footer').css('bottom', '-100px');
-  }
-} */
-
 function handleResults(responseJson) {
   for (let i = 0; i < responseJson.length; i++) {
     $('#results-list').append(`
@@ -148,7 +142,6 @@ function handleResults(responseJson) {
   }
   hideTarget($('#description-text'));
   showTarget($('#results'));
-  // handleResultsLayout();
   handleImageClick(responseJson);
   handleTextClick(responseJson);
   changeButtonText();

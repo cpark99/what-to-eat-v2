@@ -24,19 +24,12 @@ ___
 ___
 ##### Mobile:
 ___
-![Mobile Screenshot](https://raw.githubusercontent.com/cpark99/what-to-eat-v2/master/img/eat-mobile-home.png)
-![Mobile Screenshot](https://raw.githubusercontent.com/cpark99/what-to-eat-v2/master/img/eat-mobile-results.png)
-![Mobile Screenshot](https://raw.githubusercontent.com/cpark99/what-to-eat-v2/master/img/eat-mobile-details.png)
+![Mobile Screenshot](https://raw.githubusercontent.com/cpark99/what-to-eat-v2/master/img/cook-mobile-screenshot.png)
 
 ##### Tablet:
 ___
-![Tablet Screenshot](https://raw.githubusercontent.com/cpark99/what-to-eat-v2/master/img/eat-tablet-results.png)
-![Tablet Screenshot](https://raw.githubusercontent.com/cpark99/what-to-eat-v2/master/img/eat-tablet-details-2.png)
+![Tablet Screenshot](https://raw.githubusercontent.com/cpark99/what-to-eat-v2/master/img/cook-tablet-screenshot.png)
 
 ##### Desktop:
 ___
-![Desktop Screenshot](https://raw.githubusercontent.com/cpark99/what-to-eat-v2/master/img/eat-desktop-home.png)
-![Desktop Screenshot](https://raw.githubusercontent.com/cpark99/what-to-eat-v2/master/img/eat-desktop-results.png)
-![Desktop Screenshot](https://raw.githubusercontent.com/cpark99/what-to-eat-v2/master/img/eat-desktop-details.png)
-
-
+![Desktop Screenshot](https://raw.githubusercontent.com/cpark99/what-to-eat-v2/master/img/cook-desktop-screenshot.png)
