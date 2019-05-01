@@ -136,9 +136,9 @@ footer p {
 #background-image {
   background: url('img/food-background.JPG') no-repeat;
   background-position: center;
-  background-size: 132%;
+  background-size: cover;
   padding-top: 1px;
-  padding-bottom: 26%;
+  padding-bottom: 25%;
 }
 
 #content-container {
@@ -178,9 +178,10 @@ footer p {
   position: fixed;
   z-index: 2;
   padding-top: 60px;
+  margin-right: 2%;
   right: 0;
   top: 0;
-  width: 100%;
+  width: 96%;
   height: 100%;
   overflow: auto;
   background: rgb(68, 68, 68);
@@ -276,14 +277,12 @@ and (min-height: 812px)
 and (orientation: portrait) {
   #background-image {
     padding-bottom: 84%;
-    background-size: 147%;
   }
 }
 
 @media (min-width: 414px) {
   #background-image {
     padding-bottom: 61%;
-    background-size: 128%;
   }
 }
 
@@ -503,7 +502,7 @@ and (orientation: portrait) {
 @media (min-width: 1224px) 
 and (orientation: landscape) {
   #background-image {
-    padding-bottom: 27%;
+    padding-bottom: 28%;
   }
 }
 
