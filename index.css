@@ -287,6 +287,14 @@ and (orientation: portrait) {
   }
 }
 
+@media (min-width: 414px) /* iphoneXR */
+and (min-height: 896px) 
+and (orientation: portrait) {
+  #background-image {
+    padding-bottom: 98%;
+  }
+}
+
 @media (max-height: 426px) {
   footer {
     position: static;
