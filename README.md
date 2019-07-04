@@ -1,7 +1,7 @@
 # It's Cook-able
 
 ### Live:
-[Link](https://cpark99.github.io/what-to-eat-v2/)
+[Link](https://its-cookable.netlify.com)
 ___
 
 ### Summary:
