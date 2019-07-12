@@ -14,7 +14,7 @@ ___
 
 ### Technologies Used:
 * JQuery
-* Javascript
+* JavaScript
 * CSS
 * HTML
 ___
