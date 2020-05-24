@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta description="This Web app decides what restaurant to eat at for you, based on an entered location">
+  <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=1, minimum-scale=0.86">
+  <title>It's Cook-able</title>
+
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Quicksand:wght@300;400&display=swap"
+    rel="stylesheet">
+  <link href="index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="is-secondary-font">
+  <div class="main-container min-h-screen flex justify-center items-center">
+    <div class="text-black flex justify-center items-center flex-col p-4">
+      <h1 class="text-5xl font-bold is-primary-font">It's Cook-able</h1>
+      <p class="mb-6">Find delicious recipes with popular ingredients</p>
+      <button id="submit-button" class="px-4 py-4 bg-orange-600 rounded-full uppercase w-full text-white">Get
+        Started</button>
+    </div>
+
+    <section id="food-categories-frame" class="hidden">
+      <form id="food-categories">
+        <select name="food-categories-list" tabindex="4" aria-controls="results-list">
+          <option value="All">All Categories</option>
+          <option value="Beef">Beef</option>
+          <option value="Chicken">Chicken</option>
+          <option value="Pork">Pork</option>
+          <option value="Lamb">Lamb</option>
+          <option value="Seafood">Seafood</option>
+          <option value="Vegetarian">Vegetarian</option>
+          <option value="Dessert">Dessert</option>
+        </select>
+        <div id="button-box">
+        </div>
+      </form>
+    </section>
+
+    <section id="results" class="hidden">
+      <div id="results-container">
+        <ul id="results-list" aria-live="polite">
+
+        </ul>
+        <div id="results-map"></div>
+      </div>
+    </section>
+
+    <section class="hidden" id="food-details-frame" aria-live="polite">
+      <h2 id="food-name-h2"></h2>
+      <div id="food-details-layout">
+        <div id="food-details-media">
+          <img id="food-image" src="" alt="">
+          <h4>How to make:</h4>
+          <iframe width="384" height="250" src="" frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <span id="close" tabindex="6">&times;</span>
+        <div id="food-details"></div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+</body>
+
+</html>
